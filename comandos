@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+clear #comando para limpa a tela 
+
+lsb_release -a # comando da versão do SO
+
+echo "----------------------------------------------------" 
+
+df # comando do espaço em disco 
+
+echo "----------------------------------------------------"
+
+
+free #comando para saber a quantidade de memoria 
+
+echo "----------------------------------------------------"
+
+
+lscpu # Comando exibe a arquitetura da CPU 
+
+echo "---------------------------------------------------"
+
+ls -lh # Permite que liste o conteúdo do diretorio que você quer 
+
+echo "---------------------------------------------------"
+
+date #comando para saber a data e hora 
+
+echo "---------------------------------------------------"
+
+last  #comando para saber o ultimo usuário  
+
+echo "---------------------------------------------------"
