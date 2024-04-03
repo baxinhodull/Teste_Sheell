@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# --------------------------------------------------------------------------------
+
+# Script : Checa PID
+# Descrição : Compara PID do script e do shell do terminal.
+# Versão : 0.1
+# autor : Carlos Junior <chjunior05@gmail.com>
+# Data :03/04/2024
+# Licença : GNU/GPL v3.0
+#-------------------------------------------------------------------------------
+# Uso:
+#------------------------------------------------------------------------------
+
+clear
+
+sep="----------------------------------------------------------------------------------"
+echo "$sep
+COMPARADNO PID DAS SESÕES DO BASH NO SCRIPT E NO TERMINAL 
+PID da ssesão do bash do script : $$
+PID da sessão do bash do terminal : $PPID
+$sep
+$(ps -p $$,$PPID -o pid=,user=,tty=,args=)
+$sep
+"
+exit 0
