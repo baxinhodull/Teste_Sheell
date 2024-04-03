@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# Opções
+
+editor="nano"
+
+dia_de_hoje=$( date +'%d/%m/%Y')
+
+header="#!/usr/bin/env bash
+# --------------------------------------------------------------------------------
+
+# Script :
+# Descrição :
+# Versão :
+# autor : Carlos Junior <chjunior05@gmail.com>
+# Data :$dia_de_hoje
+# Licença : GNU/GPL v3.0
+#-------------------------------------------------------------------------------
+# Uso:
+#------------------------------------------------------------------------------
+"
+
+[[ $# -ne 1 ]] && echo "Olá! Eu preciso de *um* nome de arquivo!" && exit 1
+
+[[ -f $1 ]] && echo "Olá! O arquivo já existe! Saindo" && exit 1
+
+echo "$header" > $1
+
+chmod +x  $1
+
+$editor $1
+exit 0
