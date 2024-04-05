@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# --------------------------------------------------------------------------------
+
+# Script : Arrays indecadas
+# Descrição :
+# Versão :
+# autor : Carlos Junior <chjunior05@gmail.com>
+# Data :04/04/2024
+# Licença : GNU/GPL v3.0
+#-------------------------------------------------------------------------------
+# Uso:
+#------------------------------------------------------------------------------
+# Arrays indexadas...
+
+
+# Arrays indexadas...
+echo " Exemplo de trabalho com arrays indexadas..."
+
+frutas=("banana" "laranja" "abacate" "limão"  "cereja" "abacaxi")
+
+cores=("amarela" "amarela" "verde" "verde" "vermelha" "amarela")
+
+read -p "Digite um número entre 0 e 5:" numero
+
+[[ ! $numero =~ ^[0-5]$ ]]  && echo -e "Tem que ser um número entre 0 e 5! Saindo..."  && exit 1
+
+echo " Você escolheu ${frutas[$numero]}, que é uma fruta ${cores[$numero]}"
+
+exit 0
