@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# --------------------------------------------------------------------------------
+
+# Script :
+# Descrição :
+# Versão :
+# autor : Carlos Junior <chjunior05@gmail.com>
+# Data :08/04/2024
+# Licença : GNU/GPL v3.0
+#-------------------------------------------------------------------------------
+# Uso:
+#------------------------------------------------------------------------------
+
+read -p "Digite um nome: " nome
+
+read -p "Digite o nome de uma revista: " revista
+
+read -p "Digite o nome de um jogo: " jogo
+
+echo "Você escolheu: $nome, $revista, $jogo."
+
+read -p "Digite um número de 1 a 3: " numero
+
+frase[1]="$nome saiu na capa da $revista!"
+
+frase[2]="$nome só consegue jogar  $jogo!"
+
+frase[3]="$nome aprendeu $revista os macetes do $jogo!"
+
+echo " ${frase[$numero]}"
+
+exit 0
